@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Мастерская Марины Моненок: плетёные изделия из бумажной лозы и кожаные вещи для дома, подарков и повседневной жизни. Напишите мастеру.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Плетёные и кожаные вещи — мастерская Марины">
+  <meta property="og:description" content="Плетёные изделия из бумажной лозы и кожаные вещи для дома, подарков и жизни. Мастерская Марины Моненок.">
+  <meta property="og:image" content="img/marina-workshop-clean.webp">
+  <title>Плетёные и кожаные вещи — мастерская Марины</title>
+  <style>
+    :root {
+      --цвет-тёмный-фон: #232830;
+      --цвет-тёмный-фон-2: #71182A;
+      --цвет-фон: #F0E9E4;
+      --цвет-фон-2: #E5DDD7;
+      --цвет-текст: #232830;
+      --цвет-текст-мягкий: #746D6B;
+      --цвет-акцент: #71182A;
+      --цвет-акцент-тёмный: #71182A;
+      --цвет-акцент-яркий: #71182A;
+      --цвет-линия: #DAA565;
+      --цвет-тёплый: #DAA565;
+      --цвет-тёплый-мягкий: #ECC587;
+      --paper: #f0e9e4;
+      --surface: #f7f1ed;
+      --surface-secondary: #e5ddd7;
+      --burgundy: #71182a;
+      --ink: #232830;
+      --gold: #daa565;
+      --gold-light: #ecc587;
+      --muted: #746d6b;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body { font-family: Inter, Arial, sans-serif; }
+    .hero { position: relative; min-height: 100svh; display: grid; align-items: center; overflow: hidden; color: var(--ink); background: var(--paper); isolation: isolate; }
+    .photo { position: absolute; z-index: -2; inset: 0; margin: 0; }
+    .photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 56% center; }
+    .hero::before { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgba(229,221,215,.94) 0%, rgba(229,221,215,.84) 28%, rgba(229,221,215,.62) 43%, rgba(229,221,215,.2) 60%, rgba(229,221,215,0) 72%); }
+    .copy { width: min(42rem, 48vw); margin-left: clamp(2rem, 7.2vw, 7rem); padding: 3rem 0; }
+    .brand { display: block; margin: 0 0 1.4rem; color: var(--burgundy); font-size: .82rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+    h1 { max-width: 13ch; margin: 0 0 1.25rem; padding: .08em 0 .14em; font-family: Manrope, Arial, sans-serif; font-size: clamp(2rem, 3.35vw, 2.9rem); line-height: 1.17; letter-spacing: -.035em; overflow: visible; }
+    .lead { max-width: 34rem; margin: 0; color: var(--muted); font-size: clamp(1rem, 1.12vw, 1.12rem); line-height: 1.62; }
+    .cta { display: inline-flex; align-items: center; justify-content: center; min-height: 3.2rem; margin-top: 1.5rem; padding: .85rem 1.55rem; border: 1px solid rgba(236,197,135,.7); border-radius: 999px; color: var(--surface); background: var(--burgundy); font-weight: 700; text-decoration: none; box-shadow: 0 4px 12px rgba(113,24,42,.18); animation: cta-breathe 2.8s ease-in-out infinite; transition: filter .2s ease, transform .2s ease; }
+    .cta:hover { filter: brightness(1.07); transform: translateY(-2px); }
+    .cta:focus-visible { outline: 3px solid var(--paper); outline-offset: 4px; }
+    @keyframes cta-breathe { 0%, 100% { box-shadow: 0 4px 12px rgba(113,24,42,.18); } 50% { box-shadow: 0 5px 20px rgba(113,24,42,.34); } }
+    @media (max-width: 760px) {
+      .hero { display: flex; min-height: 100svh; align-items: flex-end; overflow: hidden; color: var(--ink); background: var(--paper); }
+      .photo { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; aspect-ratio: auto; }
+      .photo img { object-position: 58% 20%; -webkit-mask-image: linear-gradient(to bottom, #000 44%, rgba(0,0,0,.84) 60%, rgba(0,0,0,.38) 78%, transparent 96%); mask-image: linear-gradient(to bottom, #000 44%, rgba(0,0,0,.84) 60%, rgba(0,0,0,.38) 78%, transparent 96%); }
+      .hero::before { content: none; }
+      .copy { position: relative; z-index: 1; width: 100%; margin: 0; padding: 0 1.25rem 2rem; color: var(--ink); background: transparent; }
+      .brand { margin-bottom: .8rem; color: var(--burgundy); }
+      h1 { max-width: 18ch; font-size: clamp(1.9rem, 7.7vw, 2.45rem); line-height: 1.2; }
+      .lead { color: var(--muted); font-size: 1rem; line-height: 1.58; }
+      .cta { margin-top: 1.15rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="hero">
+      <figure class="photo фото">
+      <img src="img/marina-workshop-clean.webp" alt="Марина за столом в мастерской среди плетёных корзин">
+    </figure>
+    <section class="copy" aria-labelledby="hero-title">
+      <span class="brand">Мастерская Марины</span>
+      <h1 id="hero-title">Плетёные&nbsp;и кожаные вещи для дома, подарков&nbsp;и жизни</h1>
+      <p class="lead">Я&nbsp;создаю вещи, которым легко найти своё место: в&nbsp;доме, в&nbsp;ежедневных привычках, в&nbsp;особенном подарке или в&nbsp;вашей обычной жизни.</p>
+      <a class="cta" href="https://vk.me/marina_monenok">Написать</a>
+    </section>
+  </main>
+</body>
+</html>
