@@ -1,77 +1,236 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Мастерская Марины Моненок: плетёные изделия из бумажной лозы и кожаные вещи для дома, подарков и повседневной жизни. Напишите мастеру.">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Плетёные и кожаные вещи — мастерская Марины">
-  <meta property="og:description" content="Плетёные изделия из бумажной лозы и кожаные вещи для дома, подарков и жизни. Мастерская Марины Моненок.">
-  <meta property="og:image" content="https://marinamon7770-cmyk.github.io/marina-monenok/img/marina-workshop-clean.webp">
-  <title>Плетёные и кожаные вещи — мастерская Марины</title>
-  <style>
-    :root {
-      --цвет-тёмный-фон: #232830;
-      --цвет-тёмный-фон-2: #71182A;
-      --цвет-фон: #F0E9E4;
-      --цвет-фон-2: #E5DDD7;
-      --цвет-текст: #232830;
-      --цвет-текст-мягкий: #746D6B;
-      --цвет-акцент: #71182A;
-      --цвет-акцент-тёмный: #71182A;
-      --цвет-акцент-яркий: #71182A;
-      --цвет-линия: #DAA565;
-      --цвет-тёплый: #DAA565;
-      --цвет-тёплый-мягкий: #ECC587;
-      --paper: #f0e9e4;
-      --surface: #f7f1ed;
-      --surface-secondary: #e5ddd7;
-      --burgundy: #71182a;
-      --ink: #232830;
-      --gold: #daa565;
-      --gold-light: #ecc587;
-      --muted: #746d6b;
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Плетёные и кожаные вещи — мастерская Марины</title>
+<meta name="description" content="Мастерская Марины Моненок: плетёные изделия из бумажной лозы и кожаные вещи для дома, подарков и повседневной жизни. Напишите мастеру.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://marinamon7770-cmyk.github.io/marina-monenok/">
+<meta property="og:title" content="Плетёные и кожаные вещи — мастерская Марины">
+<meta property="og:description" content="Мастерская Марины — плетёные и кожаные вещи">
+<meta property="og:image" content="https://marinamon7770-cmyk.github.io/marina-monenok/img/marina-workshop-clean.webp">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Марина Моненок",
+  "@id": "https://marinamon7770-cmyk.github.io/marina-monenok/#person",
+  "jobTitle": "Мастер плетёных и кожаных вещей",
+  "description": "Плету изделия из бумажной лозы, создаю сумки с клапанами из натуральной кожи и другие изделия из натуральной кожи.",
+  "url": "https://marinamon7770-cmyk.github.io/marina-monenok/",
+  "sameAs": [
+    "https://vk.ru/pletenie_mon",
+    "https://t.me/pletenie_marinamon",
+    "https://max.ru/join/UmTNlyXjn2ygpFf8d5qYDCR1uic-P_3a8wr_fCMa7ck"
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Inter:wght@400;600&display=swap">
+<link rel="stylesheet" href="style.css">
+<style>
+:root {
+  --шрифт-заголовков: Manrope, system-ui, sans-serif;
+  --шрифт-текста: Inter, system-ui, sans-serif;
+  --цвет-фон: #F0E9E4; --цвет-фон-2: #E5DDD7; --цвет-фон-карточки: #F7F1ED;
+  --цвет-текст: #232830; --цвет-текст-мягкий: #746D6B; --цвет-текст-тихий: #A9A19D;
+  --цвет-акцент: #71182A; --цвет-акцент-тёмный: #71182A; --цвет-акцент-яркий: #71182A; --цвет-на-акценте: #F7F1ED;
+  --цвет-акцент-глубже: #5E1222; --цвет-акцент-маркер: #DAA565; --цвет-линия: #DAA565;
+  --цвет-тёмный-фон: #232830; --цвет-тёмный-фон-2: #3A4048; --цвет-тёмный-текст: #F7F1ED;
+  --цвет-тёмный-фон-3: #1C2026; --цвет-тёмный-фон-4: #2B3038;
+  --цвет-тёплый: #DAA565; --цвет-тёплый-мягкий: #ECC587;
+  --цвет-стекло: color-mix(in srgb, #232830 86%, transparent);
+  --тень: 0 12px 34px color-mix(in srgb, #232830 10%, transparent);
+  --тень-чип: 0 10px 30px color-mix(in srgb, #232830 16%, transparent);
+  --тень-глубокая: 0 24px 60px color-mix(in srgb, #232830 24%, transparent);
+  --тень-спутник: 0 30px 60px color-mix(in srgb, #232830 38%, transparent);
+  --тень-плиты: 0 40px 100px color-mix(in srgb, #232830 48%, transparent);
+  --кегль-h1: clamp(32px, 5.2vw, 58px); --кегль-h2: clamp(27px, 4vw, 42px);
+  --кегль-текст: clamp(16px, 1.2vw, 18px); --кегль-лид: clamp(17px, 1.1vw, 19px);
+  --кегль-мелкий: 14px; --кегль-кикер: clamp(14px, 1.1vw, 15px); --кегль-цифра: clamp(32px, 4.5vw, 56px);
+  --разрядка-кикера: .22em;
+  --отступ-секции: clamp(56px, 8vw, 108px); --отступ-секции-тихо: clamp(44px, 6.3vw, 84px); --отступ-секции-громко: clamp(65px, 9.4vw, 127px);
+  --отступ-блока: clamp(16px, 2vw, 26px); --ширина: 1120px; --ширина-колонки: 560px;
+  --радиус: 12px; --радиус-малый: 6px; --радиус-карточки: 14px; --радиус-плитки: 18px; --радиус-телефон: 46px;
+  --кнопка-радиус: 999px; --радиус-модуля: 14px; --нить: 2px;
+  --плавность: cubic-bezier(.2, .7, .2, 1); --длительность: .25s;
+  --цвет-тёплый-тёмный: #8B6D2D;
+}
+:root, .светлый { --цвет-кнопки: #71182A; --цвет-на-кнопке: #F7F1ED; --цвет-кнопки-навёл: var(--цвет-акцент-тёмный); }
+.тёмный { --цвет-кнопки: #DDE7DE; --цвет-на-кнопке: #3E312B; --цвет-кнопки-навёл: #F5F8F5; }
+
+</style>
+<script>
+(function () {
+  var ЭТАЛОН = 0.535;                  // очко Open Sans — текстовой гарнитуры утверждённых макетов
+  var ПОТОЛОК = 1.2, МЁРТВАЯ = 0.02;   // выше потолка расползается раскладка; ближе к единице не трогаем вовсе
+  var КОМПЬЮТЕР = "(min-width: 900px)";
+  var ТОКЕНЫ = ["--кегль-текст", "--кегль-лид", "--кегль-мелкий", "--кегль-кикер"];
+  var корень = document.documentElement;
+  var холст = document.createElement("canvas").getContext("2d");
+  var ждём = 0;
+
+  function мера(буква) { var м = холст.measureText(буква); return (м && м.actualBoundingBoxAscent) || 0; }
+
+  function применить() {
+    ждём = 0;
+    if (!холст) { return; }
+
+    for (var i = 0; i < ТОКЕНЫ.length; i++) { корень.style.removeProperty(ТОКЕНЫ[i]); }
+    var стиль = getComputedStyle(корень), стек = стиль.getPropertyValue("--шрифт-текста").trim();
+    if (!стек) { return; }
+    холст.font = "400 100px " + стек;
+
+    var очко = Math.max(мера("х"), мера("x")) / 100;
+    if (!(очко > 0)) { return; }
+    var k = Math.round(Math.min(ПОТОЛОК, Math.max(1, ЭТАЛОН / очко)) * 1000) / 1000;
+    if (k - 1 < МЁРТВАЯ || !matchMedia(КОМПЬЮТЕР).matches) { k = 1; }
+    корень.setAttribute("data-очко", очко.toFixed(3));      // чтобы проверка могла сказать числа вслух
+    корень.setAttribute("data-поправка", k.toFixed(3));
+    if (k === 1) { return; }
+    for (i = 0; i < ТОКЕНЫ.length; i++) {
+      var было = стиль.getPropertyValue(ТОКЕНЫ[i]).trim();
+      if (было) { корень.style.setProperty(ТОКЕНЫ[i], "calc((" + было + ") * " + k + ")"); }
     }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; min-height: 100%; }
-    body { font-family: Inter, Arial, sans-serif; }
-    .hero { position: relative; min-height: 100svh; display: grid; align-items: center; overflow: hidden; color: var(--ink); background: var(--paper); isolation: isolate; }
-    .photo { position: absolute; z-index: -2; inset: 0; margin: 0; }
-    .photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 56% center; }
-    .hero::before { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgba(229,221,215,.94) 0%, rgba(229,221,215,.84) 28%, rgba(229,221,215,.62) 43%, rgba(229,221,215,.2) 60%, rgba(229,221,215,0) 72%); }
-    .copy { width: min(42rem, 48vw); margin-left: clamp(2rem, 7.2vw, 7rem); padding: 3rem 0; }
-    .brand { display: block; margin: 0 0 1.4rem; color: var(--burgundy); font-size: .82rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
-    h1 { max-width: 13ch; margin: 0 0 1.25rem; padding: .08em 0 .14em; color: var(--burgundy); font-family: Manrope, Arial, sans-serif; font-size: clamp(2rem, 3.35vw, 2.9rem); line-height: 1.17; letter-spacing: -.035em; overflow: visible; }
-    .lead { max-width: 34rem; margin: 0; color: var(--muted); font-size: clamp(1rem, 1.12vw, 1.12rem); line-height: 1.62; }
-    .cta { display: inline-flex; align-items: center; justify-content: center; min-height: 3.2rem; margin-top: 1.5rem; padding: .85rem 1.55rem; border: 1px solid rgba(236,197,135,.7); border-radius: 999px; color: var(--surface); background: var(--burgundy); font-weight: 700; text-decoration: none; box-shadow: 0 4px 12px rgba(113,24,42,.18); animation: cta-breathe 2.8s ease-in-out infinite; transition: filter .2s ease, transform .2s ease; }
-    .cta:hover { filter: brightness(1.07); transform: translateY(-2px); }
-    .cta:focus-visible { outline: 3px solid var(--paper); outline-offset: 4px; }
-    @keyframes cta-breathe { 0%, 100% { box-shadow: 0 4px 12px rgba(113,24,42,.18); } 50% { box-shadow: 0 5px 20px rgba(113,24,42,.34); } }
-    @media (max-width: 760px) {
-      .hero { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: clamp(10rem, 35svh, 20rem) auto; min-height: 100svh; align-items: stretch; overflow: visible; color: var(--ink); background: var(--surface); }
-      .photo { position: relative; grid-row: 1; z-index: 0; inset: auto; width: 100%; height: 100%; margin: 0; aspect-ratio: auto; }
-      .photo img { object-position: 58% center; -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 55%, rgba(0,0,0,.72) 76%, rgba(0,0,0,.22) 92%, transparent 100%); mask-image: linear-gradient(to bottom, #000 0%, #000 55%, rgba(0,0,0,.72) 76%, rgba(0,0,0,.22) 92%, transparent 100%); }
-      .hero::before { content: none; }
-      .copy { position: relative; grid-row: 2; z-index: 1; width: 100%; margin: 0; padding: .25rem 1.25rem 1.5rem; color: var(--ink); background: var(--surface); }
-      .brand { margin-bottom: .8rem; color: var(--burgundy); }
-      h1 { max-width: 22ch; margin-bottom: .9rem; font-size: clamp(1.8rem, 7vw, 2.15rem); line-height: 1.16; }
-      .lead { color: var(--muted); font-size: 1rem; line-height: 1.58; }
-      .cta { margin-top: .9rem; }
-    }
-  </style>
+  }
+
+  применить();
+
+  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(применить); }
+
+  addEventListener("resize", function () { ждём = ждём || requestAnimationFrame(применить); });
+})();
+</script>
 </head>
 <body>
-  <main class="hero">
-      <figure class="photo фото">
-      <img src="img/marina-workshop-clean.webp" alt="Марина за столом в мастерской среди плетёных корзин">
+<section class="hero" id="экран-01" data-тип="первый-экран">
+  <figure class="photo фото"><img src="img/marina-workshop-clean.webp" alt="Марина в мастерской плетёных вещей"></figure>
+  <div class="copy">
+    <p class="brand">Мастерская Марины</p>
+    <h1 id="hero-title">Плетёные и кожаные вещи для дома, подарков и жизни</h1>
+    <p class="lead">Короба, сумки и подарки — под ваше место, привычки и задачу. Обсудим идею, материалы и детали вместе.</p>
+    <a class="cta" href="https://vk.me/marina_monenok">Написать Марине</a>
+  </div>
+</section>
+<style>
+  #экран-01.hero { position: relative; min-height: 100svh; display: grid; align-items: center; overflow: hidden; color: #232830; background: #F0E9E4; isolation: isolate; }
+  #экран-01 .photo { position: absolute; z-index: -2; inset: 0; margin: 0; }
+  #экран-01 .photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 56% center; }
+  #экран-01.hero::before { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgba(229,221,215,.94) 0%, rgba(229,221,215,.84) 28%, rgba(229,221,215,.62) 43%, rgba(229,221,215,.2) 60%, rgba(229,221,215,0) 72%); }
+  #экран-01 .copy { width: min(42rem, 48vw); margin-left: clamp(2rem, 7.2vw, 7rem); padding: 3rem 0; }
+  #экран-01 .brand { display: block; margin: 0 0 1.4rem; color: #71182A; font-size: .82rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+  #экран-01 h1 { max-width: 13ch; margin: 0 0 1.25rem; padding: .08em 0 .14em; color: #71182A; font-size: clamp(2rem, 3.35vw, 2.9rem); line-height: 1.17; letter-spacing: -.035em; }
+  #экран-01 .lead { max-width: 34rem; margin: 0; color: #746D6B; font-size: clamp(1rem, 1.12vw, 1.12rem); line-height: 1.62; }
+  #экран-01 .cta { display: inline-flex; align-items: center; justify-content: center; min-height: 3.2rem; margin-top: 1.5rem; padding: .85rem 1.55rem; border: 1px solid rgba(236,197,135,.7); border-radius: 999px; color: #F7F1ED; background: #71182A; font-weight: 700; text-decoration: none; }
+  @media (max-width: 760px) {
+    #экран-01.hero { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: clamp(10rem, 35svh, 20rem) auto; min-height: 100svh; align-items: stretch; overflow: visible; background: #F7F1ED; }
+    #экран-01 .photo { position: relative; grid-row: 1; z-index: 0; inset: auto; width: 100%; height: 100%; margin: 0; }
+    #экран-01 .photo img { object-position: 58% center; -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 55%, rgba(0,0,0,.72) 76%, rgba(0,0,0,.22) 92%, transparent 100%); mask-image: linear-gradient(to bottom, #000 0%, #000 55%, rgba(0,0,0,.72) 76%, rgba(0,0,0,.22) 92%, transparent 100%); }
+    #экран-01.hero::before { content: none; }
+    #экран-01 .copy { position: relative; grid-row: 2; z-index: 1; width: 100%; margin: 0; padding: .25rem 1.25rem 1.5rem; background: #F7F1ED; }
+    #экран-01 .brand { margin-bottom: .8rem; }
+    #экран-01 h1 { max-width: 22ch; margin-bottom: .9rem; font-size: clamp(1.8rem, 7vw, 2.15rem); line-height: 1.16; }
+    #экран-01 .lead { font-size: 1rem; line-height: 1.58; }
+  }
+</style>
+<section class="блок блок--о-себе тёмный фон--пятна" id="экран-02" data-тип="о-себе" data-вёрстка="своя"><div class="стык стык--низ" aria-hidden="true" style="--стык-сосед: var(--цвет-фон)"></div>
+<div class="блок__внутри">
+  <div class="модули">
+    <article class="плита плита--текст">
+      <p class="метка">О Марине и материалах</p>
+      <h2>Вещь под ваше место и ваши привычки</h2>
+      <p class="лид">Марина Моненок · мастер плетёных и кожаных вещей</p>
+      <p class="текст">Нужен короб под конкретную полку, сумка на каждый день или подарок, который не уберут в шкаф? Покажите фотографию, примерные размеры или просто расскажите, что задумали. Меня зовут Марина Моненок. Я плету из бумажной лозы и работаю с натуральной кожей. Вместе обсудим форму, размер, цвет и детали; если что-то окажется неудобным, скажу об этом прямо.</p>
+    </article>
+    <figure class="плита плита--материал фото"><img src="img/marina-materials-still-life.webp" alt="Солнечный натюрморт с плетёными корзинами"></figure>
+    <div class="плита плита--подпись"><p class="подпись">Бумажная лоза · натуральная кожа</p></div>
+  </div>
+</div>
+</section>
+<section class="блок блок--работы светлый фон--пятна" id="экран-03" data-тип="работы" data-вёрстка="своя"><div class="стык стык--верх" aria-hidden="true" style="--стык-сосед: var(--цвет-тёмный-фон)"></div><div class="стык стык--низ" aria-hidden="true" style="--стык-сосед: var(--цвет-фон-2, var(--цвет-фон))"></div>
+<div class="блок__внутри">
+  <div class="шапка">
+    <div>
+      <p class="метка">Работы</p>
+      <h2>Найдите свою идею среди моих работ</h2>
+    </div>
+    <p class="лид">Вещи для дома, на каждый день и в подарок. Цвет и размер будущего изделия обсудим под ваш запрос.</p>
+  </div>
+  <div class="галерея">
+    <figure class="предмет">
+      <div class="заглушка-картинки" aria-label="Место для фотографии плетёных коробов"><span>фото<br>коробов</span></div>
+      <figcaption><strong>Короба для хранения</strong><span>Плетёные короба в светлых и коричневых оттенках</span></figcaption>
     </figure>
-    <section class="copy" aria-labelledby="hero-title">
-      <span class="brand">Мастерская Марины</span>
-      <h1 id="hero-title">Плетёные&nbsp;и кожаные вещи для дома, подарков&nbsp;и жизни</h1>
-      <p class="lead">Я&nbsp;создаю вещи, которым легко найти своё место: в&nbsp;доме, в&nbsp;ежедневных привычках, в&nbsp;особенном подарке или в&nbsp;вашей обычной жизни.</p>
-      <a class="cta" href="https://vk.me/marina_monenok">Написать</a>
-    </section>
-  </main>
+    <figure class="предмет">
+      <div class="заглушка-картинки" aria-label="Место для фотографии плетёного подноса"><span>фото<br>подноса</span></div>
+      <figcaption><strong>Поднос для кухни</strong><span>Светлый плетёный поднос с ручками</span></figcaption>
+    </figure>
+    <figure class="предмет">
+      <div class="заглушка-картинки" aria-label="Место для фотографии сумки Энни"><span>фото<br>сумки</span></div>
+      <figcaption><strong>Сумка «Энни»</strong><span>Плетёная сумка с кожаным клапаном и ремнём</span></figcaption>
+    </figure>
+    <figure class="предмет">
+      <div class="заглушка-картинки" aria-label="Место для фотографии кожаного очечника"><span>фото<br>очечника</span></div>
+      <figcaption><strong>Очечник</strong><span>Кожаный футляр для очков с застёжкой и петлёй</span></figcaption>
+    </figure>
+  </div>
+  <a class="больше" href="https://vk.ru/market-165556151?screen=group" target="_blank" rel="noreferrer">Больше изделий в ВК →</a>
+</div>
+</section>
+<section class="блок блок--отзывы светлый второй фон--пятна" id="экран-04" data-тип="отзывы" data-вёрстка="своя"><div class="стык стык--верх" aria-hidden="true" style="--стык-сосед: var(--цвет-фон)"></div>
+<div class="блок__внутри">
+  <div class="отзывы-заголовок">
+    <div>
+      <p class="метка">Отзывы и изделия</p>
+      <h2>Вещи, которые нашли своё место</h2>
+    </div>
+    <div>
+      <p class="лид">Посмотрите, какие изделия уже живут в домах покупателей — и выберите своё для дома или подарка.</p>
+      <div class="действия">
+        <a class="действие" href="https://vk.ru/market-165556151?screen=group" target="_blank" rel="noreferrer">Смотреть каталог →</a>
+        <a class="действие действие--контур" href="https://vk.ru/topic-165556151_38120965" target="_blank" rel="noreferrer">Все отзывы в ВК →</a>
+      </div>
+    </div>
+  </div>
+  <div class="лента" aria-label="Навигация по разделу">
+    <a class="лента__ячейка" href="https://vk.ru/market-165556151?screen=group" target="_blank" rel="noreferrer">Изделия для дома →</a>
+    <a class="лента__ячейка" href="https://vk.ru/topic-165556151_38120965" target="_blank" rel="noreferrer">Реальные отзывы в группе →</a>
+  </div>
+  <div class="листы">
+    <article class="лист">
+      <div class="лист__шапка"><h3 class="лист__название">Для порядка</h3><span class="лист__номер">Лист 01</span></div>
+      <div class="отзывы">
+        <figure class="отзыв">
+          <a class="товар товар--бордовый" href="https://vk.ru/market-165556151?screen=group" target="_blank" rel="noreferrer" aria-label="Открыть каталог: короба под полку"><span class="товар__номер">01 / 04</span><strong>Короба<br>под полку</strong><span class="товар__подпись">фото изделия ↗</span></a>
+          <div class="отзыв__текст"><blockquote>«Просто идеально встали на полку и подошли по цвету!»</blockquote><cite><strong>Светлана Соколова</strong><span>Короба под полку</span></cite></div>
+        </figure>
+        <figure class="отзыв отзыв--обратный">
+          <a class="товар" href="https://vk.ru/market-165556151?screen=group" target="_blank" rel="noreferrer" aria-label="Открыть каталог: корзины для белья"><span class="товар__номер">02 / 04</span><strong>Корзины<br>для белья</strong><span class="товар__подпись">фото изделия ↗</span></a>
+          <div class="отзыв__текст"><blockquote>«Ура, теперь никаких куч белья.»</blockquote><cite><strong>Алла Чаевникова</strong><span>Корзины для белья</span></cite></div>
+        </figure>
+      </div>
+      <div class="лист__низ"><span>Порядок на каждый день</span><span>01—02</span></div>
+    </article>
+    <article class="лист">
+      <div class="лист__шапка"><h3 class="лист__название">Для подарка</h3><span class="лист__номер">Лист 02</span></div>
+      <div class="отзывы">
+        <figure class="отзыв">
+          <a class="товар товар--бордовый" href="https://vk.ru/market-165556151?screen=group" target="_blank" rel="noreferrer" aria-label="Открыть каталог: менажница для дочери"><span class="товар__номер">03 / 04</span><strong>Менажница<br>для дочери</strong><span class="товар__подпись">фото изделия ↗</span></a>
+          <div class="отзыв__текст"><blockquote>«С подарком я угодила.»</blockquote><cite><strong>Елена Точеная</strong><span>Менажница для дочери</span></cite></div>
+        </figure>
+        <figure class="отзыв отзыв--обратный">
+          <a class="товар" href="https://vk.ru/market-165556151?screen=group" target="_blank" rel="noreferrer" aria-label="Открыть каталог: помощь с выбором"><span class="товар__номер">04 / 04</span><strong>Помощь<br>с выбором</strong><span class="товар__подпись">перейти к заказу ↗</span></a>
+          <div class="отзыв__текст"><blockquote>«…помогла мне сделать правильный выбор»</blockquote><cite><strong>Ольга Викторовна</strong><span>Помощь с выбором</span></cite></div>
+        </figure>
+      </div>
+      <div class="лист__низ"><span>Подарки с личным смыслом</span><span>03—04</span></div>
+    </article>
+  </div>
+  <a class="больше" href="https://vk.ru/topic-165556151_38120965" target="_blank" rel="noreferrer">Больше отзывов в ВК →</a>
+</div>
+</section>
 </body>
 </html>
