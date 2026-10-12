@@ -1777,9 +1777,9 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 
 /* экран 04 */
 #экран-04 .отзывы-заголовок { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr); gap: var(--отступ-блока); align-items: end; margin-bottom: clamp(2rem, 4vw, 3.75rem); }
-#экран-04 .метка { display: flex; align-items: center; gap: 10px; margin: 0 0 20px; color: var(--цвет-акцент-маркер); font-size: var(--кегль-кикер); letter-spacing: var(--разрядка-кикера); text-transform: uppercase; }
+#экран-04 .метка { display: flex; align-items: center; gap: 10px; margin: 0 0 20px; color: var(--текст-ключа); font-size: var(--кегль-кикер); letter-spacing: var(--разрядка-кикера); text-transform: uppercase; }
 #экран-04 .метка::before { content: ""; flex: 0 0 2.5rem; height: var(--нить); background: var(--цвет-акцент-маркер); }
-#экран-04 h2 { max-width: 11ch; margin: 0; color: var(--текст-ключа); font-size: var(--кегль-h1); font-weight: 800; line-height: .94; }
+#экран-04 h2 { max-width: 11ch; margin: 0; color: var(--текст-ключа); font-size: var(--кегль-h2); font-weight: 800; line-height: .94; }
 #экран-04 .лид { max-width: 32rem; margin: 0 0 1.25rem; color: var(--текст-ключа); font-size: var(--кегль-лид); line-height: 1.4; }
 #экран-04 .действия { display: flex; flex-wrap: wrap; gap: .75rem; }
 #экран-04 .действие { display: inline-flex; align-items: center; justify-content: center; min-height: 3rem; padding: .75rem 1.1rem; border: 1px solid var(--цвет-акцент); border-radius: var(--кнопка-радиус); color: var(--цвет-на-акценте, var(--цвет-тёмный-текст)); background: var(--цвет-акцент); box-shadow: var(--тень); font-size: var(--кегль-текст); font-weight: 700; text-decoration: none; }
@@ -1795,29 +1795,26 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 #экран-04 .лист::before { top: -.5rem; clip-path: polygon(0 72%, 3% 22%, 6% 68%, 10% 18%, 15% 66%, 20% 20%, 25% 64%, 30% 16%, 35% 70%, 40% 22%, 45% 64%, 50% 17%, 55% 68%, 60% 20%, 65% 64%, 70% 17%, 75% 68%, 80% 22%, 85% 64%, 90% 18%, 95% 66%, 100% 25%, 100% 100%, 0 100%); }
 #экран-04 .лист::after { bottom: -.5rem; clip-path: polygon(0 0, 100% 0, 100% 72%, 96% 28%, 92% 74%, 87% 20%, 82% 70%, 77% 25%, 72% 75%, 67% 22%, 62% 68%, 57% 18%, 52% 72%, 47% 26%, 42% 70%, 37% 20%, 32% 74%, 27% 24%, 22% 70%, 17% 18%, 12% 72%, 7% 25%, 3% 70%, 0 28%); }
 #экран-04 .лист__шапка { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding-bottom: 1.25rem; border-bottom: var(--нить) solid var(--цвет-акцент-маркер); }
-#экран-04 .лист__номер { color: var(--цвет-акцент-маркер); font: 700 var(--кегль-мелкий)/1 var(--шрифт-заголовков); letter-spacing: .08em; text-transform: uppercase; }
+#экран-04 .лист__номер { color: var(--текст-ключа); font: 700 var(--кегль-мелкий)/1 var(--шрифт-заголовков); letter-spacing: .08em; text-transform: uppercase; }
 #экран-04 .лист__название { margin: 0; color: var(--текст-ключа); font: 700 var(--кегль-h2)/1 var(--шрифт-заголовков); }
 #экран-04 .отзывы { display: grid; }
 #экран-04 .отзыв { display: grid; grid-template-columns: minmax(250px, .75fr) minmax(0, 1.25fr); gap: clamp(1.25rem, 3vw, 3.5rem); align-items: center; margin: 0; padding: clamp(1.5rem, 3vw, 3rem) 0; border-bottom: 1px solid color-mix(in srgb, var(--цвет-акцент-маркер) 62%, transparent); }
 #экран-04 .отзыв:last-child { border-bottom: 0; }
 #экран-04 .отзыв--обратный .товар { order: 2; }
 #экран-04 .отзыв--обратный .отзыв__текст { order: 1; }
-#экран-04 .товар { position: relative; display: flex; flex-direction: column; justify-content: space-between; min-height: clamp(14rem, 24vw, 22rem); margin: 0; padding: 1.25rem 1.4rem; overflow: hidden; color: var(--цвет-тёмный-текст); background: var(--цвет-тёмный-фон); text-decoration: none; }
-#экран-04 .товар::after { content: ""; position: absolute; inset: .55rem; border: var(--нить) solid color-mix(in srgb, var(--цвет-акцент-маркер) 78%, transparent); pointer-events: none; }
-#экран-04 .товар--бордовый { background: var(--цвет-акцент); color: var(--цвет-на-акценте, var(--цвет-тёмный-текст)); }
-#экран-04 .товар__номер { position: relative; z-index: 1; font: 700 var(--кегль-мелкий)/1 var(--шрифт-заголовков); letter-spacing: .08em; opacity: .82; }
-#экран-04 .товар strong { position: relative; z-index: 1; max-width: 9ch; font: 800 var(--кегль-h2)/.92 var(--шрифт-заголовков); text-transform: uppercase; }
-#экран-04 .товар__подпись { position: relative; z-index: 1; align-self: flex-end; font-size: var(--кегль-текст); opacity: .84; }
-#экран-04 .товар:hover strong { text-decoration: underline; text-underline-offset: .12em; }
+#экран-04 .товар { min-width: 0; margin: 0; color: var(--текст-ключа); }
+#экран-04 .товар img { display: block; width: 100%; aspect-ratio: 1.18; object-fit: cover; border: var(--нить) solid color-mix(in srgb, var(--цвет-акцент-маркер) 78%, transparent); box-shadow: var(--тень); }
+#экран-04 .товар__подпись { display: block; margin-top: .7rem; color: var(--текст-ключа); font-size: var(--кегль-текст); font-weight: 700; line-height: 1.25; }
 #экран-04 .отзыв__текст { position: relative; }
 #экран-04 blockquote { margin: 0 0 1.35rem; color: var(--текст-ключа); font-size: var(--кегль-h2); font-weight: 700; line-height: 1.06; }
 #экран-04 blockquote::before { content: "“"; display: block; margin-bottom: .25rem; color: var(--цвет-акцент-маркер); font: 800 var(--кегль-цифра)/.55 var(--шрифт-заголовков); }
 #экран-04 cite { display: block; color: var(--текст-ключа); font-size: var(--кегль-текст); font-style: normal; }
 #экран-04 cite strong { display: block; margin-bottom: .25rem; color: var(--текст-ключа); font-weight: 700; }
 #экран-04 cite span { display: block; color: var(--текст-ключа); font-size: var(--кегль-текст); opacity: .82; }
+#экран-04 cite a { display: inline-block; margin-top: .5rem; color: var(--текст-ключа); font-size: var(--кегль-мелкий); text-underline-offset: .18em; }
 #экран-04 .лист__низ { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 1.15rem; color: var(--текст-ключа); font-size: var(--кегль-мелкий); }
-#экран-04 .лист__низ span:last-child { color: var(--цвет-акцент-маркер); font-weight: 700; }
+#экран-04 .лист__низ span:last-child { color: var(--текст-ключа); font-weight: 700; }
 #экран-04 .больше { display: inline-flex; align-items: center; justify-content: center; min-height: 3.2rem; margin-top: clamp(1.75rem, 3vw, 2.75rem); padding: .85rem 1.35rem; border: 1px solid var(--цвет-акцент); border-radius: var(--кнопка-радиус); color: var(--цвет-на-акценте, var(--цвет-тёмный-текст)); background: var(--цвет-акцент); box-shadow: var(--тень); font-size: var(--кегль-текст); font-weight: 700; text-decoration: none; }
 #экран-04 .больше:hover { color: var(--цвет-на-акценте, var(--цвет-тёмный-текст)); background: var(--цвет-акцент-тёмный, var(--цвет-акцент)); }
-@media (max-width: 899px) { #экран-04 .отзывы-заголовок { grid-template-columns: 1fr; gap: 18px; } #экран-04 .отзыв { grid-template-columns: 1fr; gap: 1.35rem; } #экран-04 .отзыв--обратный .товар, #экран-04 .отзыв--обратный .отзыв__текст { order: 0; } #экран-04 .товар { min-height: 15rem; } }
+@media (max-width: 899px) { #экран-04 .отзывы-заголовок { grid-template-columns: 1fr; gap: 18px; } #экран-04 .отзыв { grid-template-columns: 1fr; gap: 1.35rem; } #экран-04 .отзыв--обратный .товар, #экран-04 .отзыв--обратный .отзыв__текст { order: 0; } #экран-04 .товар img { aspect-ratio: 1.35; } }
 @media (max-width: 699px) { #экран-04 .лента { grid-template-columns: 1fr; } #экран-04 .лента__ячейка { border-right: 0; border-bottom: 1px solid color-mix(in srgb, var(--цвет-акцент-маркер) 55%, transparent); } #экран-04 .лента__ячейка:last-child { border-bottom: 0; } #экран-04 h2 { max-width: 12ch; } #экран-04 .действия { align-items: stretch; flex-direction: column; } #экран-04 .действие { width: 100%; } }
