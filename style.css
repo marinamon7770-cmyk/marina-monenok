@@ -1756,17 +1756,24 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 #экран-03 .метка::before { content: ""; flex: 0 0 2.5rem; height: var(--нить); background: var(--тёплый-ключа); }
 #экран-03 h2 { max-width: 12ch; margin: 0; color: var(--текст-ключа); font-size: var(--кегль-h2); line-height: .98; }
 #экран-03 .лид { max-width: 30rem; margin: 0 0 4px; color: var(--текст-ключа); font-size: var(--кегль-лид); line-height: 1.45; }
-#экран-03 .галерея { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--отступ-блока); }
-#экран-03 .предмет { min-width: 0; margin: 0; }
-#экран-03 .заглушка-картинки { display: grid; place-items: center; min-height: clamp(15rem, 27vw, 25rem); overflow: hidden; border-radius: var(--радиус-плитки); background: var(--глубина-ключа); color: var(--текст-ключа); box-shadow: var(--тень); }
+#экран-03 .галерея { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: clamp(12px, 1.6vw, 24px); row-gap: clamp(24px, 3vw, 44px); align-items: start; }
+#экран-03 .предмет { display: flex; min-width: 0; flex-direction: column; margin: 0; }
+#экран-03 .предмет:nth-child(1) { grid-column: 1 / span 4; grid-row: 1; align-self: end; width: min(100%, 21rem); margin-bottom: 28px; }
+#экран-03 .предмет:nth-child(2) { grid-column: 6 / span 5; grid-row: 1; width: min(100%, 28rem); }
+#экран-03 .предмет:nth-child(3) { grid-column: 2 / span 5; grid-row: 2; width: min(100%, 23rem); }
+#экран-03 .предмет:nth-child(4) { grid-column: 8 / span 5; grid-row: 2; justify-self: end; width: min(100%, 26rem); align-self: end; margin-top: 36px; }
+#экран-03 .заглушка-картинки { display: grid; flex: 0 0 auto; place-items: center; aspect-ratio: 1; min-height: 0; overflow: hidden; border: 1px solid color-mix(in srgb, var(--тёплый-ключа) 35%, transparent); border-radius: var(--радиус-плитки) var(--радиус-плитки) var(--радиус-малый) var(--радиус-малый); background: var(--цвет-фон-карточки); color: var(--текст-ключа); box-shadow: var(--тень); }
+#экран-03 .заглушка-картинки img { display: block; width: 100%; height: 100%; min-height: 0; object-fit: cover; object-position: center; }
 #экран-03 .заглушка-картинки span { max-width: 7ch; padding: 1rem; color: var(--тёплый-ключа); font-size: var(--кегль-h2); line-height: .95; text-align: center; }
-#экран-03 figcaption { padding: 16px 0 0; color: var(--текст-ключа); font-size: var(--кегль-текст); }
-#экран-03 figcaption strong { display: block; margin-bottom: 4px; color: var(--текст-ключа); font-size: var(--кегль-текст); }
-#экран-03 figcaption span { color: color-mix(in srgb, var(--текст-ключа) 72%, transparent); }
+#экран-03 figcaption { display: grid; grid-template-columns: auto 1fr; column-gap: 12px; align-items: baseline; padding: 12px 2px 0; color: var(--текст-ключа); font-size: var(--кегль-текст); }
+#экран-03 figcaption::before { content: "0" counter(работа); counter-increment: работа; grid-row: span 2; color: var(--тёплый-тёмный-ключа, var(--тёплый-ключа)); font-size: var(--кегль-мелкий); letter-spacing: .08em; }
+#экран-03 .галерея { counter-reset: работа; }
+#экран-03 figcaption strong { display: block; margin-bottom: 3px; color: var(--текст-ключа); font-size: var(--кегль-текст); }
+#экран-03 figcaption span { grid-column: 2; color: color-mix(in srgb, var(--текст-ключа) 72%, transparent); }
 #экран-03 .больше { display: inline-flex; align-items: center; justify-content: center; min-height: 3.2rem; margin-top: var(--отступ-блока); padding: .85rem 1.35rem; border: 1px solid color-mix(in srgb, var(--тёплый-ключа) 70%, transparent); border-radius: var(--кнопка-радиус); color: var(--цвет-на-акценте, var(--цвет-тёмный-текст)); background: var(--цвет-акцент); box-shadow: var(--тень); font-size: var(--кегль-текст); font-weight: 700; text-decoration: none; }
 #экран-03 .больше:hover { color: var(--цвет-на-акценте, var(--цвет-тёмный-текст)); background: color-mix(in srgb, var(--цвет-акцент) 88%, black); }
-@media (max-width: 999px) { #экран-03 .галерея { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 699px) { #экран-03 .шапка { grid-template-columns: 1fr; gap: 18px; } #экран-03 h2 { max-width: 14ch; } #экран-03 .галерея { grid-template-columns: 1fr; } #экран-03 .заглушка-картинки { min-height: 16rem; } }
+@media (max-width: 999px) and (min-width: 700px) { #экран-03 .предмет:nth-child(1) { margin-bottom: 18px; } #экран-03 .предмет:nth-child(4) { margin-top: 24px; } }
+@media (max-width: 699px) { #экран-03 .шапка { grid-template-columns: 1fr; gap: 18px; } #экран-03 h2 { max-width: 14ch; } #экран-03 .галерея { display: flex; flex-direction: column; gap: 26px; } #экран-03 .предмет:nth-child(1) { width: 82%; max-width: none; align-self: start; margin: 0; } #экран-03 .предмет:nth-child(2) { width: 94%; max-width: none; align-self: end; } #экран-03 .предмет:nth-child(3) { width: 84%; max-width: none; align-self: start; margin-left: 4%; } #экран-03 .предмет:nth-child(4) { width: 88%; max-width: none; align-self: end; margin-top: 0; } #экран-03 .заглушка-картинки { min-height: auto; aspect-ratio: 1; border-radius: var(--радиус-плитки) var(--радиус-плитки) var(--радиус-малый) var(--радиус-малый); } #экран-03 figcaption { padding-top: 10px; } }
 
 /* экран 04 */
 #экран-04 .отзывы-заголовок { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr); gap: var(--отступ-блока); align-items: end; margin-bottom: clamp(2rem, 4vw, 3.75rem); }
