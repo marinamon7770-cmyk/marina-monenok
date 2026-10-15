@@ -1820,6 +1820,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 @media (max-width: 699px) { #экран-04 .лента { grid-template-columns: 1fr; } #экран-04 .лента__ячейка { border-right: 0; border-bottom: 1px solid color-mix(in srgb, var(--цвет-акцент-маркер) 55%, transparent); } #экран-04 .лента__ячейка:last-child { border-bottom: 0; } #экран-04 h2 { max-width: 12ch; } #экран-04 .действия { align-items: stretch; flex-direction: column; } #экран-04 .действие { width: 100%; } }
 
 /* экран 05 */
+#экран-05 { --кегль-текст: 16px; --кегль-лид: 16px; }
 #экран-05::before { content: none; background: none; }
 #экран-05 .заказ-шапка { max-width: 760px; margin: 0 auto clamp(2.5rem, 5vw, 4.5rem); text-align: center; }
 #экран-05 h2 { max-width: 16ch; margin: 0 auto 1.2rem; color: var(--текст-ключа); font-size: var(--кегль-h2); font-weight: 800; line-height: 1; }
@@ -1876,6 +1877,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 }
 
 /* экран 07 */
+#экран-07 { --кегль-текст: 16px; --кегль-лид: 16px; }
 #экран-07 .секция__шапка { max-width: 800px; margin: 0 0 clamp(2rem, 4vw, 3.5rem); }
 #экран-07 .секция__шапка h2 { max-width: 20ch; margin: 0 0 1rem; color: var(--текст-ключа); font-size: var(--кегль-h2); line-height: 1.06; }
 #экран-07 .секция__шапка p { max-width: 58ch; margin: 0; color: color-mix(in srgb, var(--текст-ключа) 76%, transparent); font-size: var(--кегль-лид); line-height: 1.55; }
@@ -1888,7 +1890,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 #экран-07 .площадка__адрес { display: block; color: color-mix(in srgb, var(--текст-ключа) 76%, transparent); font-size: var(--кегль-текст); line-height: 1.45; overflow-wrap: anywhere; }
 #экран-07 .площадка__переход { display: block; margin-top: 1.5rem; color: var(--цвет-акцент); font-size: var(--кегль-текст); font-weight: 700; }
 #экран-07 .площадка__переход::after { content: " ↗"; color: var(--цвет-акцент-маркер); }
-#экран-07 .подвал { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3rem); margin-top: clamp(3rem, 7vw, 6rem); margin-bottom: clamp(4rem, 7vw, 5rem); padding-top: clamp(1.5rem, 3vw, 2.5rem); border-top: var(--нить) solid var(--цвет-акцент-маркер); }
+#экран-07 .подвал { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3rem); margin-top: clamp(3rem, 7vw, 6rem); padding-top: clamp(1.5rem, 3vw, 2.5rem); border-top: var(--нить) solid var(--цвет-акцент-маркер); }
 #экран-07 .подвал p { max-width: 34ch; margin: 0; color: var(--текст-ключа); font-size: var(--кегль-текст); line-height: 1.5; }
 #экран-07 .подвал h3 { margin: 0 0 .8rem; color: var(--текст-ключа); font-size: var(--кегль-мелкий); }
 #экран-07 .подвал__ссылки { display: flex; flex-wrap: wrap; gap: .6rem 1.1rem; }
@@ -1899,31 +1901,3 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-07 .площадка__переход { margin-top: 1rem; }
   #экран-07 .подвал { grid-template-columns: 1fr; gap: 1.25rem; margin-top: 2.5rem; }
 }
-
-/* Навигация по длинной странице */
-.меню-разделов { position: absolute; z-index: 1000; top: 18px; right: clamp(16px, 4vw, 52px); color: var(--цвет-текст, #232830); font-family: var(--шрифт-текста, sans-serif); }
-.меню-разделов > summary { display: flex; align-items: center; gap: 10px; min-height: 46px; padding: 0 16px; border: 1px solid color-mix(in srgb, var(--цвет-акцент-маркер, #c69555) 72%, transparent); border-radius: 999px; background: color-mix(in srgb, var(--цвет-фон, #f0e9e4) 94%, transparent); box-shadow: 0 8px 28px rgba(35, 30, 28, .12); cursor: pointer; list-style: none; }
-.меню-разделов > summary::-webkit-details-marker { display: none; }
-.меню-разделов > summary > span:first-child, .меню-разделов > summary > span:first-child::before, .меню-разделов > summary > span:first-child::after { display: block; width: 18px; height: 1.5px; border-radius: 2px; background: var(--цвет-акцент, #71182a); }
-.меню-разделов > summary > span:first-child { position: relative; }
-.меню-разделов > summary > span:first-child::before, .меню-разделов > summary > span:first-child::after { position: absolute; left: 0; content: ""; transition: transform .2s ease, top .2s ease; }
-.меню-разделов > summary > span:first-child::before { top: -6px; }
-.меню-разделов > summary > span:first-child::after { top: 6px; }
-.меню-разделов[open] > summary > span:first-child { background: transparent; }
-.меню-разделов[open] > summary > span:first-child::before { top: 0; transform: rotate(45deg); }
-.меню-разделов[open] > summary > span:first-child::after { top: 0; transform: rotate(-45deg); }
-.меню-разделов__подпись { font-size: 14px; font-weight: 700; }
-.меню-разделов > nav { position: absolute; top: calc(100% + 10px); right: 0; display: grid; gap: 2px; width: min(270px, calc(100vw - 32px)); padding: 10px; border: 1px solid color-mix(in srgb, var(--цвет-акцент-маркер, #c69555) 50%, transparent); border-radius: 18px; background: var(--цвет-фон-карточки, #f7f1ed); box-shadow: 0 16px 42px rgba(35, 30, 28, .18); }
-.меню-разделов > nav a { padding: 11px 12px; border-radius: 10px; color: inherit; font-size: 14px; line-height: 1.3; text-decoration: none; }
-.меню-разделов > nav a:hover, .меню-разделов > nav a:focus-visible { color: var(--цвет-акцент, #71182a); background: color-mix(in srgb, var(--цвет-акцент-маркер, #c69555) 14%, transparent); }
-.кнопка-наверх { position: fixed; z-index: 999; right: clamp(16px, 4vw, 52px); bottom: 22px; display: grid; width: 46px; height: 46px; place-items: center; border: 1px solid color-mix(in srgb, var(--цвет-акцент-маркер, #c69555) 75%, transparent); border-radius: 50%; color: var(--цвет-акцент, #71182a); background: var(--цвет-фон, #f0e9e4); box-shadow: 0 8px 24px rgba(35, 30, 28, .18); font-size: 24px; line-height: 1; text-decoration: none; opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity .2s ease, transform .2s ease, visibility .2s ease; }
-.кнопка-наверх.видна { opacity: 1; visibility: visible; transform: translateY(0); }
-.кнопка-наверх.у-карточек { opacity: 0; visibility: hidden; transform: translateY(8px); }
-.кнопка-наверх:focus-visible, .меню-разделов > summary:focus-visible { outline: 2px solid var(--цвет-акцент-маркер, #c69555); outline-offset: 3px; }
-@media (max-width: 600px) {
-  .меню-разделов { top: 12px; right: 12px; }
-  .меню-разделов > summary { width: 46px; padding: 0; justify-content: center; }
-  .меню-разделов__подпись { display: none; }
-  #экран-07 .подвал__реквизиты p + p { font-size: clamp(14px, 1vw, 16px); }
-}
-@media (prefers-reduced-motion: reduce) { .меню-разделов > summary > span:first-child::before, .меню-разделов > summary > span:first-child::after, .кнопка-наверх { transition: none; } }

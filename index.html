@@ -105,19 +105,7 @@
 })();
 </script>
 </head>
-<body id="верх">
-<details class="меню-разделов">
-  <summary aria-label="Открыть меню разделов"><span aria-hidden="true"></span><span class="меню-разделов__подпись">Разделы</span></summary>
-  <nav aria-label="Разделы сайта">
-    <a href="#экран-01">Главная</a>
-    <a href="#экран-02">О мастере</a>
-    <a href="#экран-03">Изделия</a>
-    <a href="#экран-04">Отзывы</a>
-    <a href="#экран-05">Заказ и доставка</a>
-    <a href="#экран-06">Вопросы</a>
-    <a href="#экран-07">Контакты</a>
-  </nav>
-</details>
+<body>
 <section class="hero" id="экран-01" data-тип="первый-экран">
   <figure class="photo фото"><img src="img/marina-workshop-clean.webp" alt="Марина в мастерской плетёных вещей"></figure>
   <div class="copy">
@@ -355,26 +343,5 @@
   </footer>
 </div>
 </section>
-<a class="кнопка-наверх" href="#верх" aria-label="Наверх" title="Наверх"><span aria-hidden="true">↑</span></a>
-<script>
-(() => {
-  const topButton = document.querySelector('.кнопка-наверх');
-  const menu = document.querySelector('.меню-разделов');
-  const footer = document.querySelector('#экран-07 .подвал');
-  let cardsVisible = false;
-  let footerVisible = false;
-  const atPageEnd = () => window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 24;
-  const updateTopButton = () => topButton.classList.toggle('видна', window.scrollY > 420 && (!cardsVisible || atPageEnd()) && (!footerVisible || atPageEnd()));
-  window.addEventListener('scroll', updateTopButton, { passive: true });
-  window.addEventListener('resize', updateTopButton, { passive: true });
-  new IntersectionObserver(([entry]) => { cardsVisible = entry.isIntersecting; updateTopButton(); }, { threshold: 0.15 }).observe(document.querySelector('#экран-07 .площадки'));
-  new IntersectionObserver(([entry]) => { footerVisible = entry.isIntersecting; updateTopButton(); }, { threshold: 0.08 }).observe(footer);
-  updateTopButton();
-  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { menu.open = false; }));
-  document.addEventListener('click', event => {
-    if (menu.open && !menu.contains(event.target)) menu.open = false;
-  });
-})();
-</script>
 </body>
 </html>
