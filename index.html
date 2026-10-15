@@ -105,7 +105,19 @@
 })();
 </script>
 </head>
-<body>
+<body id="верх">
+<details class="меню-разделов">
+  <summary aria-label="Открыть меню разделов"><span aria-hidden="true"></span><span class="меню-разделов__подпись">Разделы</span></summary>
+  <nav aria-label="Разделы сайта">
+    <a href="#экран-01">Главная</a>
+    <a href="#экран-02">О мастере</a>
+    <a href="#экран-03">Изделия</a>
+    <a href="#экран-04">Отзывы</a>
+    <a href="#экран-05">Заказ и доставка</a>
+    <a href="#экран-06">Вопросы</a>
+    <a href="#экран-07">Контакты</a>
+  </nav>
+</details>
 <section class="hero" id="экран-01" data-тип="первый-экран">
   <figure class="photo фото"><img src="img/marina-workshop-clean.webp" alt="Марина в мастерской плетёных вещей"></figure>
   <div class="copy">
@@ -261,7 +273,7 @@
   </aside>
 </div>
 </section>
-<section class="блок блок--вопросы-ответы блок--тихо светлый второй фон--зерно" id="экран-06" data-тип="вопросы-ответы" data-вёрстка="своя"><div class="стык стык--верх" aria-hidden="true" style="--стык-сосед: var(--цвет-фон)"></div>
+<section class="блок блок--вопросы-ответы блок--тихо светлый второй фон--зерно" id="экран-06" data-тип="вопросы-ответы" data-вёрстка="своя"><div class="стык стык--верх" aria-hidden="true" style="--стык-сосед: var(--цвет-фон)"></div><div class="стык стык--низ" aria-hidden="true" style="--стык-сосед: var(--цвет-фон)"></div>
 <div class="блок__внутри">
   <header class="секция__шапка">
     <h2>Ответы на вопросы перед заказом</h2>
@@ -303,5 +315,66 @@
   </div>
 </div>
 </section>
+<section class="блок блок--контакты блок--тихо светлый фон--зерно" id="экран-07" data-тип="контакты" data-вёрстка="своя"><div class="стык стык--верх" aria-hidden="true" style="--стык-сосед: var(--цвет-фон-2, var(--цвет-фон))"></div>
+<div class="блок__внутри">
+  <header class="секция__шапка">
+    <h2>Мастерская в ВК, Telegram и MAX</h2>
+    <p>В сообществах можно посмотреть мои работы и публикации. Выберите площадку, которой пользуетесь.</p>
+  </header>
+  <nav class="площадки" aria-label="Площадки мастерской">
+    <a class="площадка" href="https://vk.ru/pletenie_mon" target="_blank" rel="noopener noreferrer">
+      <span><span class="площадка__название">Перейти в сообщество ВК</span><span class="площадка__адрес">vk.ru/pletenie_mon</span></span>
+      <span class="площадка__переход">ВКонтакте</span>
+    </a>
+    <a class="площадка" href="https://t.me/pletenie_marinamon" target="_blank" rel="noopener noreferrer">
+      <span><span class="площадка__название">Открыть канал в Telegram</span><span class="площадка__адрес">t.me/pletenie_marinamon</span></span>
+      <span class="площадка__переход">Telegram</span>
+    </a>
+    <a class="площадка" href="https://max.ru/join/UmTNlyXjn2ygpFf8d5qYDCR1uic-P_3a8wr_fCMa7ck" target="_blank" rel="noopener noreferrer">
+      <span><span class="площадка__название">Открыть канал в MAX</span><span class="площадка__адрес">Канал мастерской в MAX</span></span>
+      <span class="площадка__переход">MAX</span>
+    </a>
+  </nav>
+  <footer class="подвал">
+    <div class="подвал__реквизиты">
+      <p>Мастерская плетёных и кожаных вещей · Марина Моненок</p>
+      <p>Самозанятая · налог на профессиональный доход</p>
+      <p>Моненок Марина Евгеньевна · ИНН 63114914180</p>
+    </div>
+    <div>
+      <h3>Разделы</h3>
+      <nav class="подвал__ссылки подвал__разделы" aria-label="Разделы страницы">
+        <a href="#экран-02">Вещь под ваше место и ваши привычки</a>
+        <a href="#экран-03">Найдите свою идею среди моих работ</a>
+        <a href="#экран-04">Вещи, которые нашли своё место</a>
+        <a href="#экран-05">Заказ, доставка и возврат</a>
+        <a href="#экран-06">Ответы на вопросы перед заказом</a>
+        <a href="#экран-07">Мастерская в ВК, Telegram и MAX</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+</section>
+<a class="кнопка-наверх" href="#верх" aria-label="Наверх" title="Наверх"><span aria-hidden="true">↑</span></a>
+<script>
+(() => {
+  const topButton = document.querySelector('.кнопка-наверх');
+  const menu = document.querySelector('.меню-разделов');
+  const footer = document.querySelector('#экран-07 .подвал');
+  let cardsVisible = false;
+  let footerVisible = false;
+  const atPageEnd = () => window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 24;
+  const updateTopButton = () => topButton.classList.toggle('видна', window.scrollY > 420 && (!cardsVisible || atPageEnd()) && (!footerVisible || atPageEnd()));
+  window.addEventListener('scroll', updateTopButton, { passive: true });
+  window.addEventListener('resize', updateTopButton, { passive: true });
+  new IntersectionObserver(([entry]) => { cardsVisible = entry.isIntersecting; updateTopButton(); }, { threshold: 0.15 }).observe(document.querySelector('#экран-07 .площадки'));
+  new IntersectionObserver(([entry]) => { footerVisible = entry.isIntersecting; updateTopButton(); }, { threshold: 0.08 }).observe(footer);
+  updateTopButton();
+  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { menu.open = false; }));
+  document.addEventListener('click', event => {
+    if (menu.open && !menu.contains(event.target)) menu.open = false;
+  });
+})();
+</script>
 </body>
 </html>
