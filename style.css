@@ -1846,3 +1846,31 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-05 .шаг:last-child p { border-bottom: 0; }
   #экран-05 .возврат { grid-template-columns: 1fr; gap: .55rem; margin-top: 1.1rem; padding-top: 1.1rem; }
 }
+
+/* экран 06 */
+#экран-06 .секция__шапка { max-width: 760px; margin: 0 0 clamp(2rem, 4vw, 3.25rem); }
+#экран-06 .секция__шапка h2 { max-width: 18ch; margin: 0; color: var(--текст-ключа); font-size: var(--кегль-h2); font-weight: 800; line-height: 1.04; }
+#экран-06 .секция__шапка h2::before { content: ""; display: block; width: 2.5rem; height: var(--нить); margin: 0 0 1.1rem; background: var(--цвет-акцент-маркер); }
+#экран-06 .вопросы-сетка { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(17rem, .7fr); gap: clamp(1.5rem, 4vw, 3.75rem); align-items: start; }
+#экран-06 .вопросы { display: grid; gap: .7rem; min-width: 0; }
+#экран-06 .вопрос-карточка { position: relative; min-width: 0; align-self: start; border-top: var(--нить) solid var(--цвет-акцент-маркер); }
+#экран-06 .вопрос-карточка p { color: var(--текст-ключа); }
+#экран-06 .выбор-связи { width: 100%; }
+#экран-06 .выбор-связи__кнопка { display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: 100%; min-height: 3.2rem; padding: .8rem 1.05rem; border: 1px solid var(--цвет-кнопки, var(--цвет-акцент)); border-radius: var(--кнопка-радиус); color: var(--цвет-на-кнопке, var(--цвет-на-акценте)); background: var(--цвет-кнопки, var(--цвет-акцент)); box-shadow: var(--тень); font-size: var(--кегль-текст); font-weight: 700; line-height: 1.25; cursor: pointer; list-style: none; }
+#экран-06 .выбор-связи__кнопка::-webkit-details-marker { display: none; }
+#экран-06 .выбор-связи__кнопка::after { content: "+"; color: inherit; font-size: var(--кегль-лид); }
+#экран-06 .выбор-связи[open] .выбор-связи__кнопка::after { content: "−"; }
+#экран-06 .выбор-связи__кнопка:hover { background: var(--цвет-кнопки-навёл, var(--цвет-акцент-тёмный)); }
+#экран-06 .выбор-связи__кнопка:focus-visible, #экран-06 .выбор-связи__варианты a:focus-visible { outline: 2px solid var(--цвет-акцент-маркер); outline-offset: 3px; }
+#экран-06 .выбор-связи__варианты { display: grid; gap: .45rem; padding: .75rem 0 0; }
+#экран-06 .выбор-связи__варианты a { display: flex; align-items: center; justify-content: space-between; gap: .75rem; min-height: 2.8rem; padding: .65rem .85rem; border-bottom: 1px solid color-mix(in srgb, var(--цвет-акцент-маркер) 58%, transparent); color: var(--текст-ключа); font-size: var(--кегль-текст); font-weight: 700; text-decoration: none; }
+#экран-06 .выбор-связи__варианты a::after { content: "↗"; color: var(--цвет-акцент-маркер); }
+#экран-06 .выбор-связи__варианты a:hover { color: var(--цвет-акцент); }
+@media (max-width: 899px) {
+  #экран-06 .вопросы-сетка { grid-template-columns: minmax(0, 1fr); gap: clamp(1.5rem, 5vw, 2.25rem); }
+  #экран-06 .вопрос-карточка { width: 100%; }
+}
+@media (max-width: 699px) {
+  #экран-06 .секция__шапка { margin-bottom: 1.65rem; }
+  #экран-06 .секция__шапка h2 { max-width: 16ch; }
+}
