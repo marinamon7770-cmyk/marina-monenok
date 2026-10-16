@@ -136,7 +136,7 @@
   #экран-01 .copy { width: min(42rem, 48vw); margin-left: clamp(2rem, 7.2vw, 7rem); padding: 3rem 0; }
   #экран-01 .brand { display: block; margin: 0 0 1.4rem; color: #71182A; font-size: .82rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
   #экран-01 h1 { max-width: 13ch; margin: 0 0 1.25rem; padding: .08em 0 .14em; color: #71182A; font-size: clamp(2rem, 3.35vw, 2.9rem); line-height: 1.17; letter-spacing: -.035em; }
-  #экран-01 .lead { max-width: 34rem; margin: 0; color: #746D6B; font-size: clamp(1rem, 1.12vw, 1.12rem); line-height: 1.62; }
+  #экран-01 .lead { max-width: 34rem; margin: 0; color: #4B4542; font-size: clamp(1rem, 1.12vw, 1.12rem); line-height: 1.62; }
   #экран-01 .cta { display: inline-flex; align-items: center; justify-content: center; min-height: 3.2rem; margin-top: 1.5rem; padding: .85rem 1.55rem; border: 1px solid rgba(236,197,135,.7); border-radius: 999px; color: #F7F1ED; background: #71182A; font-weight: 700; text-decoration: none; }
   @media (max-width: 760px) {
     #экран-01.hero { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: clamp(10rem, 35svh, 20rem) auto; min-height: 100svh; align-items: stretch; overflow: visible; background: #F7F1ED; }
@@ -144,7 +144,7 @@
     #экран-01 .photo img { object-position: 58% center; -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 55%, rgba(0,0,0,.72) 76%, rgba(0,0,0,.22) 92%, transparent 100%); mask-image: linear-gradient(to bottom, #000 0%, #000 55%, rgba(0,0,0,.72) 76%, rgba(0,0,0,.22) 92%, transparent 100%); }
     #экран-01.hero::before { content: none; }
     #экран-01 .copy { position: relative; grid-row: 2; z-index: 1; width: 100%; margin: 0; padding: .25rem 1.25rem 1.5rem; background: #F7F1ED; }
-    #экран-01 .brand { margin-bottom: .8rem; }
+    #экран-01 .brand { margin-bottom: .8rem; font-size: 1rem; }
     #экран-01 h1 { max-width: 22ch; margin-bottom: .9rem; font-size: clamp(1.8rem, 7vw, 2.15rem); line-height: 1.16; }
     #экран-01 .lead { font-size: 1rem; line-height: 1.58; }
   }
@@ -174,7 +174,7 @@
       <p class="лид">Марина Моненок · мастер плетёных и кожаных вещей</p>
       <p class="текст">Нужен короб под конкретную полку, сумка на каждый день или подарок, который не уберут в шкаф? Покажите фотографию, примерные размеры или просто расскажите, что задумали. Меня зовут Марина Моненок. Я плету из бумажной лозы и работаю с натуральной кожей. Вместе обсудим форму, размер, цвет и детали; если что-то окажется неудобным, скажу об этом прямо.</p>
     </article>
-    <figure class="плита плита--материал фото"><img src="img/marina-materials-still-life.webp" alt="Солнечный натюрморт с плетёными корзинами"></figure>
+    <figure class="плита плита--материал фото"><img src="img/marina-materials-still-life.webp" alt="Солнечный натюрморт с плетёными корзинами" loading="lazy"></figure>
     <div class="плита плита--подпись"><p class="подпись">Бумажная лоза · натуральная кожа</p></div>
   </div>
 </div>
@@ -233,11 +233,11 @@
       <div class="лист__шапка"><h3 class="лист__название">Для порядка</h3><span class="лист__номер">Лист 01</span></div>
       <div class="отзывы">
         <figure class="отзыв">
-          <figure class="фото товар"><img src="img/marina-review-01-box.webp" alt="Светлый плетёный короб с декоративной полосой"><figcaption class="товар__подпись">Короба под полку</figcaption></figure>
+          <figure class="фото товар"><img src="img/marina-review-01-box.webp" alt="Светлый плетёный короб с декоративной полосой" loading="lazy"><figcaption class="товар__подпись">Короба под полку</figcaption></figure>
           <div class="отзыв__текст"><blockquote>«Просто идеально встали на полку и подошли по цвету!»</blockquote><cite><strong>Светлана Соколова</strong><span>Короба под полку</span><a href="https://vk.ru/topic-165556151_38120965" target="_blank" rel="noreferrer">Источник: обсуждение во ВКонтакте ↗</a></cite></div>
         </figure>
         <figure class="отзыв отзыв--обратный">
-          <figure class="фото товар"><img src="img/marina-review-02-baskets.webp" alt="Плетёные корзины для хранения в ванной комнате"><figcaption class="товар__подпись">Корзины для белья</figcaption></figure>
+          <figure class="фото товар"><img src="img/marina-review-02-baskets.webp" alt="Плетёные корзины для хранения в ванной комнате" loading="lazy"><figcaption class="товар__подпись">Корзины для белья</figcaption></figure>
           <div class="отзыв__текст"><blockquote>«Ура, теперь никаких куч белья.»</blockquote><cite><strong>Алла Чаевникова</strong><span>Корзины для белья</span><a href="https://vk.ru/topic-165556151_38120965" target="_blank" rel="noreferrer">Источник: обсуждение во ВКонтакте ↗</a></cite></div>
         </figure>
       </div>
@@ -247,11 +247,11 @@
       <div class="лист__шапка"><h3 class="лист__название">Для подарка</h3><span class="лист__номер">Лист 02</span></div>
       <div class="отзывы">
         <figure class="отзыв">
-          <figure class="фото товар"><img src="img/marina-review-03-tea-basket.webp" alt="Плетёная чайная корзинка с угощениями"><figcaption class="товар__подпись">Корзинка для угощений</figcaption></figure>
+          <figure class="фото товар"><img src="img/marina-review-03-tea-basket.webp" alt="Плетёная чайная корзинка с угощениями" loading="lazy"><figcaption class="товар__подпись">Корзинка для угощений</figcaption></figure>
           <div class="отзыв__текст"><blockquote>«С подарком я угодила.»</blockquote><cite><strong>Елена Точеная</strong><span>Менажница для дочери</span><a href="https://vk.ru/topic-165556151_38120965" target="_blank" rel="noreferrer">Источник: обсуждение во ВКонтакте ↗</a></cite></div>
         </figure>
         <figure class="отзыв отзыв--обратный">
-          <figure class="фото товар"><img src="img/marina-review-04-kitchen.webp" alt="Плетёные изделия в кухонном интерьере"><figcaption class="товар__подпись">Плетёные вещи в интерьере</figcaption></figure>
+          <figure class="фото товар"><img src="img/marina-review-04-kitchen.webp" alt="Плетёные изделия в кухонном интерьере" loading="lazy"><figcaption class="товар__подпись">Плетёные вещи в интерьере</figcaption></figure>
           <div class="отзыв__текст"><blockquote>«…помогла мне сделать правильный выбор»</blockquote><cite><strong>Ольга Викторовна</strong><span>Помощь с выбором</span><a href="https://vk.ru/topic-165556151_38120965" target="_blank" rel="noreferrer">Источник: обсуждение во ВКонтакте ↗</a></cite></div>
         </figure>
       </div>
@@ -263,10 +263,13 @@
 </section>
 <section class="блок блок--решение светлый" id="экран-05" data-тип="решение" data-вёрстка="своя"><div class="стык стык--верх" aria-hidden="true" style="--стык-сосед: var(--цвет-фон-2, var(--цвет-фон))"></div><div class="стык стык--низ" aria-hidden="true" style="--стык-сосед: var(--цвет-фон-2, var(--цвет-фон))"></div>
 <div class="блок__внутри">
-  <header class="заказ-шапка">
-    <h2>Заказ, доставка и возврат</h2>
-    <p class="лид">Выберите готовую вещь или расскажите, что хотите заказать. Остальные детали обсудим вместе.</p>
-  </header>
+  <div class="заказ-вступление">
+    <figure class="заказ-фото"><img src="img/marina-delivery-scene.webp?v=35" alt="Упакованная посылка с лентой и листком заказа" loading="lazy"></figure>
+    <header class="заказ-шапка">
+      <h2>Заказ, доставка и возврат</h2>
+      <p class="лид">Выберите готовую вещь или расскажите, что хотите заказать. Остальные детали обсудим вместе.</p>
+    </header>
+  </div>
   <ol class="маршрут">
     <li class="шаг">
       <span class="шаг__номер">01</span>
@@ -332,26 +335,37 @@
   </div>
 </div>
 </section>
-<section class="блок блок--контакты блок--тихо светлый фон--зерно" id="экран-07" data-тип="контакты" data-вёрстка="своя"><div class="стык стык--верх" aria-hidden="true" style="--стык-сосед: var(--цвет-фон-2, var(--цвет-фон))"></div>
+<section class="блок блок--контакты блок--тихо тёмный фон--пятна" id="экран-07" data-тип="контакты" data-вёрстка="своя"><div class="стык стык--верх" aria-hidden="true" style="--стык-сосед: var(--цвет-фон-2, var(--цвет-фон))"></div>
 <div class="блок__внутри">
-  <header class="секция__шапка">
-    <h2>Мастерская в ВК, Telegram и MAX</h2>
-    <p>В сообществах можно посмотреть мои работы и публикации. Выберите площадку, которой пользуетесь.</p>
-  </header>
-  <nav class="площадки" aria-label="Площадки мастерской">
+  <div class="контакт-герой">
+    <div class="контакт-герой__текст">
+      <header class="секция__шапка">
+        <p class="контакт-метка">Я на связи</p>
+        <h2>Продолжим общение онлайн</h2>
+        <p>Показываю новые работы, рассказываю о процессе и отвечаю на вопросы. Выберите площадку, которой пользуетесь.</p>
+      </header>
+      <nav class="площадки" aria-label="Площадки мастерской">
     <a class="площадка" href="https://vk.ru/pletenie_mon" target="_blank" rel="noopener noreferrer">
+      <span class="площадка__иконка" aria-hidden="true">VK</span>
       <span><span class="площадка__название">Перейти в сообщество ВК</span><span class="площадка__адрес">vk.ru/pletenie_mon</span></span>
       <span class="площадка__переход">ВКонтакте</span>
     </a>
     <a class="площадка" href="https://t.me/pletenie_marinamon" target="_blank" rel="noopener noreferrer">
+      <span class="площадка__иконка" aria-hidden="true">TG</span>
       <span><span class="площадка__название">Открыть канал в Telegram</span><span class="площадка__адрес">t.me/pletenie_marinamon</span></span>
       <span class="площадка__переход">Telegram</span>
     </a>
     <a class="площадка" href="https://max.ru/join/UmTNlyXjn2ygpFf8d5qYDCR1uic-P_3a8wr_fCMa7ck" target="_blank" rel="noopener noreferrer">
+      <span class="площадка__иконка" aria-hidden="true">M</span>
       <span><span class="площадка__название">Открыть канал в MAX</span><span class="площадка__адрес">Канал мастерской в MAX</span></span>
       <span class="площадка__переход">MAX</span>
     </a>
-  </nav>
+      </nav>
+    </div>
+    <figure class="контакт-герой__фото">
+      <img src="img/marina-contact-neutral.webp?v=35" srcset="img/marina-contact-neutral-mobile.webp?v=35 336w, img/marina-contact-neutral.webp?v=35 512w" sizes="(max-width: 699px) 112px, 312px" alt="Марина стоит рядом с площадками для связи" loading="lazy">
+    </figure>
+  </div>
   <footer class="подвал">
     <div class="подвал__реквизиты">
       <p>Мастерская плетёных и кожаных вещей · Марина Моненок</p>
