@@ -1,2 +1,15 @@
 .DS_Store
 Thumbs.db
+# Старые черновые изображения, не используемые текущей страницей
+img/marina-business.webp
+img/marina-orbit-bag.webp
+img/marina-orbit-box.webp
+img/marina-orbit-cat-house.webp
+img/marina-orbit-tray.webp
+img/marina-portrait.webp
+img/marina-story-bag.webp
+img/marina-story-box.webp
+img/marina-story-tray.webp
+img/marina-workshop-face-v2.webp
+img/marina-workshop-posts.webp
+img/marina-workshop.webp
