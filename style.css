@@ -1816,6 +1816,48 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 #экран-04 .лист__низ span:last-child { color: var(--текст-ключа); font-weight: 700; }
 #экран-04 .больше { display: inline-flex; align-items: center; justify-content: center; min-height: 3.2rem; margin-top: clamp(1.75rem, 3vw, 2.75rem); padding: .85rem 1.35rem; border: 1px solid var(--цвет-акцент); border-radius: var(--кнопка-радиус); color: var(--цвет-на-акценте, var(--цвет-тёмный-текст)); background: var(--цвет-акцент); box-shadow: var(--тень); font-size: var(--кегль-текст); font-weight: 700; text-decoration: none; }
 #экран-04 .больше:hover { color: var(--цвет-на-акценте, var(--цвет-тёмный-текст)); background: var(--цвет-акцент-тёмный, var(--цвет-акцент)); }
+
+/* восстановление изображений экранов 05 и 07 */
+#экран-05 .заказ-вступление { display: grid; grid-template-columns: minmax(16rem, .78fr) minmax(0, 1.22fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; margin: 0 0 clamp(2.5rem, 5vw, 4.5rem); }
+#экран-05 .заказ-фото { width: 100%; aspect-ratio: 4 / 3; max-height: 310px; margin: 0; overflow: hidden; border-radius: var(--радиус); box-shadow: var(--тень); }
+#экран-05 .заказ-фото img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+#экран-05 .заказ-вступление .заказ-шапка { max-width: 760px; margin: 0; text-align: left; }
+
+#экран-07 .стык--верх { height: clamp(5rem, 10vw, 8rem); background: linear-gradient(to bottom, var(--цвет-фон-2) 0%, color-mix(in srgb, var(--цвет-фон-2) 72%, transparent) 30%, color-mix(in srgb, var(--цвет-фон-2) 30%, transparent) 62%, transparent 100%); }
+#экран-07 .контакт-герой { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: center; }
+#экран-07 .контакт-герой__текст { min-width: 0; }
+#экран-07 .секция__шапка { max-width: 800px; margin: 0 0 clamp(2rem, 4vw, 3rem); }
+#экран-07 .контакт-метка { margin: 0 0 .85rem; color: var(--цвет-акцент-маркер); font-size: var(--кегль-мелкий); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+#экран-07 .секция__шапка h2 { max-width: 20ch; margin: 0 0 1rem; color: var(--текст-ключа); font-size: var(--кегль-h2); line-height: 1.06; }
+#экран-07 .секция__шапка p { max-width: 58ch; margin: 0; color: color-mix(in srgb, var(--текст-ключа) 76%, transparent); font-size: var(--кегль-лид); line-height: 1.55; }
+#экран-07 .площадки { position: relative; z-index: 3; display: grid; gap: .75rem; }
+#экран-07 .площадка { position: relative; display: flex; min-height: 0; align-items: center; justify-content: space-between; gap: .8rem; padding: .7rem .85rem; border: 1px solid color-mix(in srgb, var(--цвет-акцент-маркер) 62%, transparent); border-radius: 12px; background: var(--фон-2-ключа); color: var(--текст-ключа); box-shadow: none; }
+#экран-07 .площадка::before { content: none; }
+#экран-07 .площадка__иконка { display: grid; flex: 0 0 2rem; width: 2rem; height: 2rem; place-items: center; border-radius: 50%; background: var(--цвет-акцент-маркер); color: var(--текст-ключа); font-size: .62rem; font-weight: 800; letter-spacing: -.04em; }
+#экран-07 .площадка__название { display: block; margin: 0 0 .25rem; color: color-mix(in srgb, var(--цвет-акцент-маркер) 82%, white); font-family: var(--шрифт-заголовков); font-size: 1rem; font-weight: 700; line-height: 1.25; }
+#экран-07 .площадка__адрес { display: block; color: color-mix(in srgb, var(--цвет-акцент-маркер) 62%, var(--текст-ключа)); font-size: .9rem; line-height: 1.35; overflow-wrap: anywhere; }
+#экран-07 .площадка__переход { display: block; margin-top: 0; color: var(--цвет-акцент); font-size: .9rem; font-weight: 700; white-space: nowrap; }
+#экран-07.тёмный .площадка__переход { color: var(--цвет-акцент-маркер); }
+#экран-07 .контакт-герой__фото { position: relative; height: min(72svh, 720px); min-height: 0; margin: 0; overflow: visible; border-radius: 0; box-shadow: none; background: transparent; display: flex; align-items: flex-end; justify-content: flex-end; }
+#экран-07 .контакт-герой__фото img { display: block; flex: none; width: auto; max-width: 100%; height: 100%; object-fit: contain; object-position: right bottom; opacity: 1; transform: translateX(0); }
+@media (min-width: 601px) and (max-width: 900px) {
+  #экран-07 .контакт-герой { grid-template-columns: minmax(0, 1fr) minmax(220px, .72fr); gap: 1rem; }
+  #экран-07 .контакт-герой__фото { min-height: 430px; overflow: hidden; }
+  #экран-07 .контакт-герой__фото img { width: 100%; max-width: 100%; height: 100%; object-fit: contain; transform: none; }
+}
+@media (max-width: 699px) {
+  #экран-05 .заказ-вступление { grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 2.25rem; }
+  #экран-05 .заказ-шапка { grid-row: 1; }
+  #экран-05 .заказ-фото { grid-row: 2; aspect-ratio: 1.55; max-height: none; }
+  #экран-07 .контакт-герой { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; min-height: 0; }
+  #экран-07 .контакт-герой__текст { display: contents; }
+  #экран-07 .секция__шапка { grid-column: 1; grid-row: 1; margin-bottom: 0; padding-right: 0; }
+  #экран-07 .контакт-герой__фото { position: relative; z-index: 1; grid-column: 1; grid-row: 2; justify-self: end; width: min(7rem, 30vw); height: 9rem; min-height: 0; margin: 0; overflow: visible; opacity: .9; pointer-events: none; }
+  #экран-07 .контакт-герой__фото img { width: 100%; height: 100%; object-fit: contain; transform: none; filter: saturate(.82); }
+  #экран-07 .площадки { grid-column: 1; grid-row: 3; grid-template-columns: 1fr; gap: 12px; }
+  #экран-07 .площадка { min-height: 0; gap: .65rem; padding: .62rem .7rem; }
+  #экран-07 .площадка__переход { font-size: .78rem; }
+}
 @media (max-width: 899px) { #экран-04 .отзывы-заголовок { grid-template-columns: 1fr; gap: 18px; } #экран-04 .отзыв { grid-template-columns: 1fr; gap: 1.35rem; } #экран-04 .отзыв--обратный .товар, #экран-04 .отзыв--обратный .отзыв__текст { order: 0; } #экран-04 .товар img { aspect-ratio: 1.35; } }
 @media (max-width: 699px) { #экран-04 .лента { grid-template-columns: repeat(2, minmax(0, 1fr)); } #экран-04 .лента__ячейка { padding: .85rem .7rem; border-right: 1px solid color-mix(in srgb, var(--цвет-акцент-маркер) 55%, transparent); border-bottom: 0; font-size: var(--кегль-мелкий); line-height: 1.15; } #экран-04 .лента__ячейка:last-child { border-right: 0; } #экран-04 h2 { max-width: 12ch; } #экран-04 .действия { align-items: stretch; flex-direction: column; } #экран-04 .действие { width: 100%; } }
 
