@@ -29,7 +29,8 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Inter:wght@400;600&display=swap">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Inter:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Inter:wght@400;600&display=swap"></noscript>
 <link rel="stylesheet" href="style.css">
 <style>
 :root {
@@ -50,7 +51,7 @@
   --тень-плиты: 0 40px 100px color-mix(in srgb, #232830 48%, transparent);
   --кегль-h1: clamp(32px, 5.2vw, 58px); --кегль-h2: clamp(27px, 4vw, 42px);
   --кегль-текст: clamp(16px, 1.2vw, 18px); --кегль-лид: clamp(17px, 1.1vw, 19px);
-  --кегль-мелкий: 14px; --кегль-кикер: clamp(14px, 1.1vw, 15px); --кегль-цифра: clamp(32px, 4.5vw, 56px);
+  --кегль-мелкий: 15px; --кегль-кикер: clamp(15px, 1.1vw, 16px); --кегль-цифра: clamp(32px, 4.5vw, 56px);
   --разрядка-кикера: .22em;
   --отступ-секции: clamp(56px, 8vw, 108px); --отступ-секции-тихо: clamp(44px, 6.3vw, 84px); --отступ-секции-громко: clamp(65px, 9.4vw, 127px);
   --отступ-блока: clamp(16px, 2vw, 26px); --ширина: 1120px; --ширина-колонки: 560px;
@@ -120,7 +121,7 @@
   </nav>
 </details>
 <section class="hero" id="экран-01" data-тип="первый-экран">
-  <figure class="photo фото"><img src="img/marina-workshop-clean.webp" alt="Марина в мастерской плетёных вещей"></figure>
+  <figure class="photo фото"><img src="img/marina-workshop-clean.webp" alt="Марина в мастерской плетёных вещей" fetchpriority="high" decoding="async"></figure>
   <div class="copy">
     <p class="brand">Мастерская Марины</p>
     <h1 id="hero-title">Плетёные и кожаные вещи для дома, подарков и жизни</h1>
@@ -134,9 +135,9 @@
   #экран-01 .photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 56% center; }
   #экран-01.hero::before { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgba(229,221,215,.94) 0%, rgba(229,221,215,.84) 28%, rgba(229,221,215,.62) 43%, rgba(229,221,215,.2) 60%, rgba(229,221,215,0) 72%); }
   #экран-01 .copy { width: min(42rem, 48vw); margin-left: clamp(2rem, 7.2vw, 7rem); padding: 3rem 0; }
-  #экран-01 .brand { display: block; margin: 0 0 1.4rem; color: #71182A; font-size: .82rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+  #экран-01 .brand { display: block; margin: 0 0 1.4rem; color: #71182A; font-size: 1rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
   #экран-01 h1 { max-width: 13ch; margin: 0 0 1.25rem; padding: .08em 0 .14em; color: #71182A; font-size: clamp(2rem, 3.35vw, 2.9rem); line-height: 1.17; letter-spacing: -.035em; }
-  #экран-01 .lead { max-width: 34rem; margin: 0; color: #746D6B; font-size: clamp(1rem, 1.12vw, 1.12rem); line-height: 1.62; }
+  #экран-01 .lead { max-width: 34rem; margin: 0; color: #5A5350; font-size: clamp(1rem, 1.12vw, 1.12rem); line-height: 1.62; }
   #экран-01 .cta { display: inline-flex; align-items: center; justify-content: center; min-height: 3.2rem; margin-top: 1.5rem; padding: .85rem 1.55rem; border: 1px solid rgba(236,197,135,.7); border-radius: 999px; color: #F7F1ED; background: #71182A; font-weight: 700; text-decoration: none; }
   @media (max-width: 760px) {
     #экран-01.hero { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: clamp(10rem, 35svh, 20rem) auto; min-height: 100svh; align-items: stretch; overflow: visible; background: #F7F1ED; }
@@ -174,7 +175,7 @@
       <p class="лид">Марина Моненок · мастер плетёных и кожаных вещей</p>
       <p class="текст">Нужен короб под конкретную полку, сумка на каждый день или подарок, который не уберут в шкаф? Покажите фотографию, примерные размеры или просто расскажите, что задумали. Меня зовут Марина Моненок. Я плету из бумажной лозы и работаю с натуральной кожей. Вместе обсудим форму, размер, цвет и детали; если что-то окажется неудобным, скажу об этом прямо.</p>
     </article>
-    <figure class="плита плита--материал фото"><img src="img/marina-materials-still-life.webp" alt="Солнечный натюрморт с плетёными корзинами"></figure>
+    <figure class="плита плита--материал фото"><img src="img/marina-materials-still-life.webp" alt="Солнечный натюрморт с плетёными корзинами" loading="lazy" decoding="async"></figure>
     <div class="плита плита--подпись"><p class="подпись">Бумажная лоза · натуральная кожа</p></div>
   </div>
 </div>
@@ -233,11 +234,11 @@
       <div class="лист__шапка"><h3 class="лист__название">Для порядка</h3><span class="лист__номер">Лист 01</span></div>
       <div class="отзывы">
         <figure class="отзыв">
-          <figure class="фото товар"><img src="img/marina-review-01-box.webp" alt="Светлый плетёный короб с декоративной полосой"><figcaption class="товар__подпись">Короба под полку</figcaption></figure>
+          <figure class="фото товар"><img src="img/marina-review-01-box.webp" alt="Светлый плетёный короб с декоративной полосой" loading="lazy" decoding="async"><figcaption class="товар__подпись">Короба под полку</figcaption></figure>
           <div class="отзыв__текст"><blockquote>«Просто идеально встали на полку и подошли по цвету!»</blockquote><cite><strong>Светлана Соколова</strong><span>Короба под полку</span><a href="https://vk.ru/topic-165556151_38120965" target="_blank" rel="noreferrer">Источник: обсуждение во ВКонтакте ↗</a></cite></div>
         </figure>
         <figure class="отзыв отзыв--обратный">
-          <figure class="фото товар"><img src="img/marina-review-02-baskets.webp" alt="Плетёные корзины для хранения в ванной комнате"><figcaption class="товар__подпись">Корзины для белья</figcaption></figure>
+          <figure class="фото товар"><img src="img/marina-review-02-baskets.webp" alt="Плетёные корзины для хранения в ванной комнате" loading="lazy" decoding="async"><figcaption class="товар__подпись">Корзины для белья</figcaption></figure>
           <div class="отзыв__текст"><blockquote>«Ура, теперь никаких куч белья.»</blockquote><cite><strong>Алла Чаевникова</strong><span>Корзины для белья</span><a href="https://vk.ru/topic-165556151_38120965" target="_blank" rel="noreferrer">Источник: обсуждение во ВКонтакте ↗</a></cite></div>
         </figure>
       </div>
@@ -247,11 +248,11 @@
       <div class="лист__шапка"><h3 class="лист__название">Для подарка</h3><span class="лист__номер">Лист 02</span></div>
       <div class="отзывы">
         <figure class="отзыв">
-          <figure class="фото товар"><img src="img/marina-review-03-tea-basket.webp" alt="Плетёная чайная корзинка с угощениями"><figcaption class="товар__подпись">Корзинка для угощений</figcaption></figure>
+          <figure class="фото товар"><img src="img/marina-review-03-tea-basket.webp" alt="Плетёная чайная корзинка с угощениями" loading="lazy" decoding="async"><figcaption class="товар__подпись">Корзинка для угощений</figcaption></figure>
           <div class="отзыв__текст"><blockquote>«С подарком я угодила.»</blockquote><cite><strong>Елена Точеная</strong><span>Менажница для дочери</span><a href="https://vk.ru/topic-165556151_38120965" target="_blank" rel="noreferrer">Источник: обсуждение во ВКонтакте ↗</a></cite></div>
         </figure>
         <figure class="отзыв отзыв--обратный">
-          <figure class="фото товар"><img src="img/marina-review-04-kitchen.webp" alt="Плетёные изделия в кухонном интерьере"><figcaption class="товар__подпись">Плетёные вещи в интерьере</figcaption></figure>
+          <figure class="фото товар"><img src="img/marina-review-04-kitchen.webp" alt="Плетёные изделия в кухонном интерьере" loading="lazy" decoding="async"><figcaption class="товар__подпись">Плетёные вещи в интерьере</figcaption></figure>
           <div class="отзыв__текст"><blockquote>«…помогла мне сделать правильный выбор»</blockquote><cite><strong>Ольга Викторовна</strong><span>Помощь с выбором</span><a href="https://vk.ru/topic-165556151_38120965" target="_blank" rel="noreferrer">Источник: обсуждение во ВКонтакте ↗</a></cite></div>
         </figure>
       </div>
